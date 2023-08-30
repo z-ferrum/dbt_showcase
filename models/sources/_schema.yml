@@ -1,0 +1,17 @@
+sources:
+  - name: sumup_raw
+    description: 'Raw transactions data from SumUp excel files. Includes transactions, devices and stores'
+    database: sumup
+    schema: raw
+    tables:
+      - name: device
+        description: 'Raw device data from SumUp excel files'
+        # columns:
+        #   - name: xxx
+        #     description: 'xxx'
+        #     tests:
+        #       - not_null
+        #       - accepted_values:
+        #           values: ['xxx']
+      - name: store
+      - name: transaction

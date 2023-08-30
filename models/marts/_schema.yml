@@ -1,0 +1,5 @@
+models:
+  - name: dim_devices
+  - name: dim_stores
+  - name: fct_transactions
+  - name: int_transactions
