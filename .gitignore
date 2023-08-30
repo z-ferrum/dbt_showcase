@@ -1,1 +1,4 @@
-_dbt_env/*
+_dbt_env/
+target/
+dbt_packages/
+logs/
