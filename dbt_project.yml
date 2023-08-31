@@ -47,6 +47,15 @@ models:
       +tags: ["weekly"]
     disabled_models:
       +enabled: false
+    
+seeds:
+  dbt_showcase:
+    +schema: raw
+    country_currencies:  # sourced from https://github.com/datasets/country-codes
+      +column_types: {
+        country:int,
+        currency:text
+      }
 
 # schema files are placed in folders and named as _schema_<folder_name>.yml
 # "_" to place it first in the list, <folder_name> to make it easy to search with hotkeys

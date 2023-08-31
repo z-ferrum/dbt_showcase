@@ -1,0 +1,195 @@
+﻿Country,Currency
+Afghanistan,AFN
+Albania,ALL
+Algeria,DZD
+Andorra,EUR
+Angola,AOA
+Antigua and Barbuda,XCD
+Argentina,ARS
+Armenia,AMD
+Australia,AUD
+Austria,EUR
+Azerbaijan,AZN
+Bahamas (the),BSD
+Bahrain,BHD
+Bangladesh,BDT
+Barbados,BBD
+Belarus,BYN
+Belgium,EUR
+Benin,XOF
+Bhutan,BTN
+Bolivia (Plurinational State of),BOB
+Bosnia and Herzegovina,BAM
+Botswana,BWP
+Brazil,BRL
+Brunei Darussalam,BND
+Bulgaria,BGN
+Burkina Faso,XOF
+Burundi,BIF
+Cabo Verde,CVE
+Cambodia,KHR
+Cameroon,XAF
+Canada,CAD
+Central African Republic (the),XAF
+Chad,XAF
+Chile,CLP
+China,CNY
+Colombia,COP
+Comoros (the),KMF
+Congo (the),XAF
+Cook Islands (the),NZD
+Costa Rica,CRC
+Croatia,HRK
+Cuba,CUC
+Cyprus,EUR
+Czech Republic (the),CZK
+Côte d'Ivoire,XOF
+Democratic People's Republic of Korea (the),KPW
+Democratic Republic of the Congo (the),CDF
+Denmark,DKK
+Djibouti,DJF
+Dominica,XCD
+Dominican Republic (the),DOP
+Ecuador,USD
+Egypt,EGP
+El Salvador,USD
+Equatorial Guinea,XAF
+Eritrea,ERN
+Estonia,EUR
+Ethiopia,ETB
+Fiji,FJD
+Finland,EUR
+France,EUR
+Gabon,XAF
+Gambia (the),GMD
+Georgia,GEL
+Germany,EUR
+Ghana,GHS
+Greece,EUR
+Grenada,XCD
+Guatemala,GTQ
+Guinea,GNF
+Guinea-Bissau,XOF
+Guyana,GYD
+Haiti,USD
+Holy See (the),EUR
+Honduras,HNL
+Hungary,HUF
+Iceland,ISK
+India,INR
+Indonesia,IDR
+Iran (Islamic Republic of),IRR
+Iraq,IQD
+Ireland,EUR
+Israel,ILS
+Italy,EUR
+Jamaica,JMD
+Japan,JPY
+Jordan,JOD
+Kazakhstan,KZT
+Kenya,KES
+Kiribati,AUD
+Kuwait,KWD
+Kyrgyzstan,KGS
+Lao People's Democratic Republic (the),LAK
+Latvia,EUR
+Lebanon,LBP
+Lesotho,ZAR
+Liberia,LRD
+Libya,LYD
+Liechtenstein,CHF
+Lithuania,EUR
+Luxembourg,EUR
+Madagascar,MGA
+Malawi,MWK
+Malaysia,MYR
+Maldives,MVR
+Mali,XOF
+Malta,EUR
+Marshall Islands (the),USD
+Mauritania,MRU
+Mauritius,MUR
+Mexico,MXN
+Micronesia (Federated States of),USD
+Monaco,EUR
+Mongolia,MNT
+Montenegro,EUR
+Morocco,MAD
+Mozambique,MZN
+Myanmar,MMK
+Namibia,ZAR
+Nauru,AUD
+Nepal,NPR
+Netherlands (the),EUR
+New Zealand,NZD
+Nicaragua,NIO
+Niger (the),XOF
+Nigeria,NGN
+Niue,NZD
+Norway,NOK
+Oman,OMR
+Pakistan,PKR
+Palau,USD
+Panama,USD
+Papua New Guinea,PGK
+Paraguay,PYG
+Peru,PEN
+Philippines (the),PHP
+Poland,PLN
+Portugal,EUR
+Qatar,QAR
+Republic of Korea (the),KRW
+Republic of Moldova (the),MDL
+Romania,RON
+Russian Federation (the),RUB
+Rwanda,RWF
+Saint Kitts and Nevis,XCD
+Saint Lucia,XCD
+Saint Vincent and the Grenadines,XCD
+Samoa,WST
+San Marino,EUR
+Sao Tome and Principe,STN
+Saudi Arabia,SAR
+Senegal,XOF
+Serbia,RSD
+Seychelles,SCR
+Sierra Leone,SLL
+Singapore,SGD
+Slovakia,EUR
+Slovenia,EUR
+Solomon Islands,SBD
+Somalia,SOS
+South Africa,ZAR
+South Sudan,SSP
+Spain,EUR
+Sri Lanka,LKR
+Sudan (the),SDG
+Suriname,SRD
+Sweden,SEK
+Switzerland,CHF
+Syrian Arab Republic,SYP
+Tajikistan,TJS
+Thailand,THB
+the former Yugoslav Republic of Macedonia,MKD
+Timor-Leste,USD
+Togo,XOF
+Tonga,TOP
+Trinidad and Tobago,TTD
+Tunisia,TND
+Turkey,TRY
+Turkmenistan,TMT
+Tuvalu,AUD
+Uganda,UGX
+Ukraine,UAH
+United Arab Emirates (the),AED
+United Kingdom of Great Britain and Northern Ireland (the),GBP
+United Republic of Tanzania (the),TZS
+United States of America (the),USD
+Uruguay,UYU
+Uzbekistan,UZS
+Vanuatu,VUV
+Venezuela (Bolivarian Republic of),VES
+Viet Nam,VND
+Yemen,YER
+Zambia,ZMW
+Zimbabwe,ZWL
