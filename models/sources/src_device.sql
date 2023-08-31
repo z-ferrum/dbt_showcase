@@ -1,1 +1,1 @@
-select * from {{ source('sumup_raw','device') }}
+select * from {{ source('showcase_raw','device') }}

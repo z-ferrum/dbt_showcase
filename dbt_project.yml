@@ -32,6 +32,18 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_showcase:
-    # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: view
+      +schema: staging
+    marts:
+      +schema: warehouse
+      +materialized: table  
+    materialized_analyses:
+      +description: "Only used for assignment purposes to (a) keep queries in one place, (b) reference models easily, (c) check results in snowflase (alternative to DBT Power User extension)"
+      +schema: analyses
+      +materialized: table  # small tables, complex computations
+    disabled_models:
+      +enabled: false
+
+# schema files are placed in folders and named as _schema_<folder_name>.yml
+# "_" to place it first in the list, <folder_name> to make it easy to search with hotkeys

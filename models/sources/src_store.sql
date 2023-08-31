@@ -1,1 +1,1 @@
-select * from {{ source('sumup_raw','store') }}
+select * from {{ source('showcase_raw','store') }}

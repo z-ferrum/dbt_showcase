@@ -23,6 +23,10 @@ models:
         tests:
           - unique
           - not_null
+      - name: customer_id
+        description: "Identifier for the associated customer. One customer may own multiple stores"
+        tests:
+          - not_null
       - name: name
         description: "Name of the store"
         tests:
@@ -39,16 +43,12 @@ models:
         description: "Country where the store is located"
         tests:
           - not_null
-      - name: created_at
-        description: "Timestamp of when the store was created"
-        tests:
-          - not_null
       - name: typology
         description: "Type or category of the store"
         tests:
           - not_null
-      - name: customer_id
-        description: "Identifier for the associated customer. One customer may own multiple stores"
+      - name: created_at
+        description: "Timestamp of when the store was created"
         tests:
           - not_null
   - name: stg_transactions
@@ -63,22 +63,18 @@ models:
         description: "Identifier for the device associated with the transaction"
         tests:
           - not_null
-      - name: product_name
-        description: "Name of the product involved in the transaction"
-        tests:
-          - not_null
       - name: product_sku
         description: "SKU of the product"
         tests:
           - not_null
           - dbt_expectations.expect_column_value_lengths_to_equal:
                 value: 13
-      - name: category_name
-        description: "Category name of the product (product unique identifier)"
+      - name: product_name
+        description: "Name of the product involved in the transaction"
         tests:
           - not_null
-      - name: amount_eurocents
-        description: "Transaction amount"
+      - name: category_name
+        description: "Category name of the product (product unique identifier)"
         tests:
           - not_null
       - name: status
@@ -87,11 +83,11 @@ models:
           - not_null
           - dbt_expectations.expect_column_values_to_be_in_set:
                 value_set: ['accepted','cancelled','refused']
-      - name: created_at
-        description: "Timestamp of when the transaction was created"
+      - name: amount_eurocents
+        description: "Transaction amount"
         tests:
           - not_null
-      - name: happened_at
-        description: "Timestamp of when the transaction actually took place"
+      - name: created_at
+        description: "Timestamp of when the transaction was created"
         tests:
           - not_null

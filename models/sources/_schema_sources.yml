@@ -1,0 +1,22 @@
+sources:
+  - name: showcase_raw
+    description: 'Raw transactions data from Sexcel files. Includes transactions, devices and stores'
+    database: showcase
+    schema: raw
+    tables:
+      - name: device
+        description: 'Raw device data from excel files'
+        tests:
+          - not_null:
+              column_name: id
+        #   - accepted_values:
+        #       values: ['xxx']
+        # columns:
+        #   - name: id
+        #     description: 'xxx'
+        #     tests:
+        #       - not_null
+        #       # - accepted_values:
+        #       #     values: ['xxx']
+      - name: store
+      - name: transaction
