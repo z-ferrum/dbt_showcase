@@ -2,92 +2,113 @@ models:
   - name: stg_devices
     description: "Prepared data for devices"
     columns:
+      
       - name: id
-        description: "Unique identifier for the device"
+        description: '{{ doc("device_id") }}'
         tests:
           - unique
           - not_null
+      
       - name: type_id
-        description: "Type of the device"
+        description: '{{ doc("device_type_id") }}'
         tests:
           - not_null
+      
       - name: store_id
-        description: "Identifier for the store where the device is located"
+        description: '{{ doc("store_id") }} where the device is located'
         tests:
           - not_null
+
   - name: stg_stores  
     description: "Prepared data for stores"
     columns:
+      
       - name: id
-        description: "Unique identifier for the store"
+        description: '{{ doc("store_id") }}'
         tests:
           - unique
           - not_null
+
       - name: customer_id
-        description: "Identifier for the associated customer. One customer may own multiple stores"
+        description: '{{ doc("customer_id") }}'
         tests:
           - not_null
+
       - name: name
-        description: "Name of the store"
+        description: '{{ doc("store_name") }}'
         tests:
           - not_null
+
       - name: address
-        description: "Address of the store"
+        description: '{{ doc("store_address") }}'
         tests:
           - not_null
+      
       - name: city
-        description: "City where the store is located"
+        description: '{{ doc("store_city") }}'
         tests:
           - not_null
+      
       - name: country
-        description: "Country where the store is located"
+        description: '{{ doc("store_country") }}'
         tests:
           - not_null
+      
       - name: typology
-        description: "Type or category of the store"
+        description: '{{ doc("store_typology") }}'
         tests:
           - not_null
+      
       - name: created_at
-        description: "Timestamp of when the store was created"
+        description: '{{ doc("store_created_at") }}'
         tests:
           - not_null
+
   - name: stg_transactions
     description: "Prepared data for transactions"
     columns:
+      
       - name: id
-        description: "Unique identifier for the transaction"
+        description: '{{ doc("transaction_id") }}'
         tests:
           - unique
           - not_null
+      
       - name: device_id
-        description: "Identifier for the device associated with the transaction"
+        description: '{{ doc("device_id") }} through which the transaction was made'
         tests:
           - not_null
+      
       - name: product_sku
-        description: "SKU of the product"
+        description: '{{ doc("product_sku") }} that has been bought'
         tests:
           - not_null
           - dbt_expectations.expect_column_value_lengths_to_equal:
                 value: 13
+      
       - name: product_name
         description: "Name of the product involved in the transaction"
         tests:
           - not_null
+      
       - name: category_name
-        description: "Category name of the product (product unique identifier)"
+        description: "Category name of the product"
         tests:
           - not_null
+      
       - name: status
-        description: "Status of the transaction"
+        description: '{{ doc("transaction_status") }}'
         tests:
           - not_null
           - dbt_expectations.expect_column_values_to_be_in_set:
                 value_set: ['accepted','cancelled','refused']
+      
       - name: amount_eurocents
-        description: "Transaction amount"
+        description: '{{ doc("transaction_amount_eurocents") }}'
         tests:
           - not_null
+      
       - name: created_at
-        description: "Timestamp of when the transaction was created"
+        description: '{{ doc("transaction_created_at") }}'
         tests:
           - not_null

@@ -35,13 +35,16 @@ models:
     staging:
       +materialized: view
       +schema: staging
+      +tags: ["daily"]
     marts:
       +schema: warehouse
-      +materialized: table  
+      +materialized: table  # large tables set to incremental
+      +tags: ["daily"]
     materialized_analyses:
       +description: "Only used for assignment purposes to (a) keep queries in one place, (b) reference models easily, (c) check results in snowflase (alternative to DBT Power User extension)"
       +schema: analyses
       +materialized: table  # small tables, complex computations
+      +tags: ["weekly"]
     disabled_models:
       +enabled: false
 

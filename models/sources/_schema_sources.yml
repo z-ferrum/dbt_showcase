@@ -1,7 +1,7 @@
 sources:
   - name: showcase_raw
     description: 'Raw transactions data from Sexcel files. Includes transactions, devices and stores'
-    database: showcase
+    database: SHOWCASE
     schema: raw
     tables:
       - name: device
