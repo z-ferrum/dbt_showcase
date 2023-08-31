@@ -1,3 +1,8 @@
+-- this model is a view
+-- snowflake supports "late materialization", meaning the view will be
+-- only executed for the rows required by a downstream incremental model
+-- no need to make this one incremental, as downstream transformations are heavier
+
 with source_transaction as (
     select * from {{ ref ('src_transaction') }}
 ),
@@ -27,5 +32,5 @@ select * from final
 -- however, in a given dataset date fields seem to be random and model subsets might not 
 -- have matching records in downstream models if limited by date fields
 {% if target.name == 'dev' %}
-limit 100
+    limit 100  -- sample data is 1500
 {% endif %}
