@@ -1,9 +1,11 @@
 {{ config(
-    'materialized': 'incremental',
-    'unique_key'='id'  -- although transactions are not expected to be updated, it is safer to use a unique key
-                       -- just in case of errors from the source system
-                       -- for large tables we might gain performance removing this key, subject to testing
-) }}
+    materialized= 'incremental',
+    unique_key='id' 
+) }}    
+-- although transactions are not expected to be updated, it is safer to use a unique key
+-- just in case of errors from the source system
+-- for large tables we might gain performance removing this key, subject to testing
+
 -- having an incremental model joining another model that receives new records introduces a more complex logic
 
 with 
@@ -39,6 +41,7 @@ final as (
                                                               -- but since ids are int, it doesn't take much space and storage is often cheaper than computing
                                                               -- yet helps to avoid future joins, as these fields are used in most of the analyses
                                                               -- approx. storage cost: (8 bytes store_id + 1 byte type_id) * 1.000.000.000 rows = 9GB (To be compared with computing cost for all analysis)
+    order by transactions.created_at asc  -- frequently used field for filtering, ordering should improve query performance for downstream models/reports (ideally set as a sort key in DW)
   )
 
 select * from final

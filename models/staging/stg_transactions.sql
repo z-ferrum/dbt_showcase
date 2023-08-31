@@ -32,5 +32,7 @@ select * from final
 -- however, in a given dataset date fields seem to be random and model subsets might not 
 -- have matching records in downstream models if limited by date fields
 {% if target.name == 'dev' %}
-    limit 100  -- sample data is 1500
+    -- order by created_at asc -- to test incremental model
+    limit 100 -- sample data is 1500
+    -- offset 150 -- to test incremental model
 {% endif %}
