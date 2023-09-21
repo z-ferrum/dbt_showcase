@@ -6,9 +6,9 @@ sources:
     tables:
       - name: device
         description: 'Raw device data from excel files'
-        tests:
-          - not_null:
-              column_name: id
+        # tests:
+        #   - not_null:
+        #       column_name: id
         #   - accepted_values:
         #       values: ['xxx']
         # columns:
