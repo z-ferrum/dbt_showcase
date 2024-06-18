@@ -25,3 +25,4 @@
     else {{ column_name }}
   end)::bigint
 {% endmacro %}
+-- comment
